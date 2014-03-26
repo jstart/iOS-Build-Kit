@@ -33,7 +33,7 @@ module BuildKit
       end
 
       def version_number_to_draw
-        Time.now.strftime("%m.%d, %l:%M %p")
+        Time.now.strftime("%m.%d,%l:%M%p")
       end
 
       def icon_files_to_decorate
@@ -63,7 +63,7 @@ module BuildKit
 
         annotation_params = {
           gravity: Magick::SouthGravity, 
-          pointsize: icon_dimension * 0.11 , 
+          pointsize: icon_dimension * 0.14 , 
           stroke: 'transparent', 
           fill: '#FFF', 
           font_family: "Helvetica CY", 
