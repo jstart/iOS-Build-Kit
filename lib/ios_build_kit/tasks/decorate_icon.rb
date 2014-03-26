@@ -33,11 +33,7 @@ module BuildKit
       end
 
       def version_number_to_draw
-        if @runner.has_completed_task? :increment_version
-          @runner.store[:new_version_number][:full]
-        else
-          BuildKit::Utilities::VersionNumber.plist_version_number(runner.config.info_plist)[:full]
-        end
+        Time.now.strftime("%m.%d, %l:%M %p")
       end
 
       def icon_files_to_decorate
